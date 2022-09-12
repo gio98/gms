@@ -1,0 +1,362 @@
+/*
+
+Coffee Mug recreated in CSS from Bogdan Despic's Dribbble - https://dribbble.com/shots/7077701-good-morning-coffee
+
+*/
+@import url("https://fonts.googleapis.com/css2?family=Bevan&family=Monoton&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  width: 100vw;
+  max-width: 60rem;
+  height: 100vh;
+  margin: auto;
+  padding: 3rem;
+  overflow: hidden;
+  background: linear-gradient(to bottom right, #eef0da, #bededd);
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+
+.shadow {
+  position: absolute;
+  width: 80rem;
+  height: 29.9rem;
+  top: 32rem;
+  left: 3.45rem;
+  background: #98b0b0;
+  z-index: -2;
+  transform-origin: 50% 50%;
+  transform: rotate(45deg);
+}
+.shadow:before {
+  content: "";
+  position: absolute;
+  width: 8rem;
+  height: 3rem;
+  top: -6rem;
+  right: 66.3rem;
+  background: transparent;
+  border-radius: 0 3rem 0 0;
+  border: 2.25rem solid #98b0b0;
+  z-index: -2;
+}
+
+.coffee {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.coffee__saucer {
+  position: absolute;
+  width: 35rem;
+  height: 35rem;
+  top: 0rem;
+  left: 0rem;
+  border-radius: 50%;
+  background: #f4d2a2;
+  z-index: -1;
+  overflow: hidden;
+  box-shadow: inset #fae6ce 0.5rem 0.5rem;
+}
+.coffee__saucer__shadow {
+  position: absolute;
+  width: 25rem;
+  height: 25rem;
+  top: 13rem;
+  left: 13rem;
+  background: #c1a784;
+  z-index: -2;
+  transform-origin: 50% 50%;
+  transform: rotate(45deg);
+}
+.coffee__saucer__shadow:before {
+  content: "";
+  position: absolute;
+  width: 8rem;
+  height: 3rem;
+  top: -6rem;
+  right: 11rem;
+  background: #f4d2a2;
+  border-radius: 0 3rem 3rem 3rem;
+  border: 2.25rem solid #c1a784;
+  z-index: -2;
+}
+.coffee__mug {
+  position: absolute;
+  top: 5rem;
+  left: 5rem;
+  width: 25rem;
+  height: 25rem;
+  border-radius: 50%;
+  background: #f2e1cd;
+  box-shadow: inset #fdfdfb 0.5rem 0.5rem;
+}
+.coffee__mug__drink {
+  position: absolute;
+  top: 2.5rem;
+  left: 2.5rem;
+  width: 20rem;
+  height: 20rem;
+  border-radius: 50%;
+  background: #664939;
+  box-shadow: inset rgba(102, 73, 57, 0.5) 0.5rem 0.5rem, inset #dda982 2.5rem 2.5rem, inset #fdfdfb -0.5rem -0.5rem, inset #dda982 0.5rem -0.5rem, inset #dda982 -0.75rem -0.75rem, inset #dda982 -0.5rem 0.5rem;
+}
+.coffee__mug__drink:after {
+  content: "";
+  position: absolute;
+  width: 20rem;
+  height: 20rem;
+  border-radius: 50%;
+  background: radial-gradient(circle at 4rem 5rem, #664939, #664939 0.5rem, transparent 0.6rem, transparent), radial-gradient(circle at 6rem 3rem, #664939, #664939 0.25rem, transparent 0.3rem, transparent), radial-gradient(circle at 7rem 3.5rem, #664939, #664939 0.25rem, transparent 0.3rem, transparent), radial-gradient(circle at 12rem 1.5rem, #664939, #664939 0.3rem, transparent 0.4rem, transparent), radial-gradient(circle at 9rem 2rem, #664939, #664939 0.15rem, transparent 0.2rem, transparent), radial-gradient(circle at 7.5rem 1rem, #664939, #664939 0.15rem, transparent 0.2rem, transparent), radial-gradient(circle at 6rem 4rem, #664939, #664939 0.3rem, transparent 0.4rem, transparent), radial-gradient(circle at 14rem 2rem, #664939, #664939 0.25rem, transparent 0.3rem, transparent), radial-gradient(circle at 13rem 2rem, #664939, #664939 0.15rem, transparent 0.2rem, transparent), radial-gradient(circle at 2rem 6rem, #664939, #664939 0.2rem, transparent 0.3rem, transparent), radial-gradient(circle at 2.5rem 7rem, #664939, #664939 0.15rem, transparent 0.2rem, transparent), radial-gradient(circle at 1.5rem 6.5rem, #664939, #664939 0.15rem, transparent 0.2rem, transparent);
+  animation: bubbles 6s linear infinite;
+}
+@keyframes bubbles {
+  50% {
+    transform: rotate(1deg);
+  }
+}
+.coffee__mug__handle {
+  position: absolute;
+  width: 2.25rem;
+  height: 6.5rem;
+  top: 3rem;
+  left: 27rem;
+  border-radius: 0.25rem;
+  transform: rotate(45deg);
+  background: #f2e1cd;
+  z-index: 1;
+  box-shadow: -0.35rem 0 #fdfdfb;
+}
+
+.text {
+  position: absolute;
+  top: 12.5rem;
+  left: 6.5rem;
+}
+
+p {
+  font-family: "Monoton", sans-serif;
+  font-size: 4rem;
+  line-height: 3.5rem;
+  color: #f46a55;
+  text-align: center;
+  animation: float 5s ease-in-out infinite;
+}
+p:last-of-type {
+  padding-top: 1rem;
+  font-family: "Bevan", sans-serif;
+  font-size: 4rem;
+  line-height: 1.5rem;
+  color: #98b0b0;
+  transform: rotate(-2deg);
+}
+
+@keyframes float {
+  50% {
+    transform: rotate(-1deg) scale(1.005);
+  }
+}
+.first:before {
+  content: "Buenos";
+  position: absolute;
+  z-index: -1;
+  font-family: "Monoton", sans-serif;
+  font-size: 4rem;
+  line-height: 3.5rem;
+  -webkit-text-stroke: 0.25rem #eef0da;
+  text-shadow: 0.1rem 0.1rem #453227, 0.2rem 0.2rem #453227, 0.3rem 0.3rem #453227, 0.4rem 0.4rem #453227, 0.5rem 0.5rem #453227;
+}
+
+.second:before {
+  content: "Dias";
+  position: absolute;
+  z-index: -1;
+  font-family: "Monoton", sans-serif;
+  font-size: 4rem;
+  line-height: 3.5rem;
+  -webkit-text-stroke: 0.25rem #eef0da;
+  text-shadow: 0.1rem 0.1rem #453227, 0.2rem 0.2rem #453227, 0.3rem 0.3rem #453227, 0.4rem 0.4rem #453227, 0.5rem 0.5rem #453227;
+}
+
+.third:before {
+  content: "VITA MIA!";
+  position: absolute;
+  z-index: -1;
+  font-family: "Bevan", sans-serif;
+  font-size: 4rem;
+  line-height: 1.5rem;
+  -webkit-text-stroke: 0.5rem #fdfdfb;
+  text-shadow: 0.1rem 0.1rem #f46a55, 0.2rem 0.2rem #f46a55, 0.3rem 0.3rem #f46a55, 0.4rem 0.4rem #f46a55, 0.5rem 0.5rem #f46a55;
+}
+
+@media (max-width: 800px) {
+  body {
+    height: 130vh;
+    transform: scale(0.55);
+    margin: -3rem;
+    padding: 0;
+  }
+}
+.cake {
+  position: absolute;
+  width: 250px;
+  height: 200px;
+  top: 50%;
+  left: 91%;
+  margin-top: -70px;
+  margin-left: -125px;
+}
+.cake > * {
+  position: absolute;
+}
+.plate {
+  width: 445px;
+  height: 110px;
+  position: absolute;
+  bottom: -127px;
+  left: -84px;
+  background-color: #ccc;
+  border-radius: 50%;
+  box-shadow: 0 2px 0 #b3b3b3, 0 4px 0 #b3b3b3, 0 5px 40px rgb(0 0 0 / 50%);
+}
+.layer {
+  position: absolute;
+  display: block;
+  width: 378px;
+  left: -49px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #553c13;
+  box-shadow: 0 2px 0px #6a4b18, 0 4px 0px #33240b, 0 6px 0px #32230b, 0 8px 0px #31230b, 0 10px 0px #30220b, 0 12px 0px #2f220b, 0 14px 0px #2f210a, 0 16px 0px #2e200a, 0 18px 0px #2d200a, 0 20px 0px #2c1f0a, 0 22px 0px #2b1f0a, 0 24px 0px #2a1e09, 0 26px 0px #2a1d09, 0 28px 0px #291d09, 0 30px 0px #281c09;
+}
+
+.layer-top {
+  top: 102px;
+}
+
+.layer-middle {
+  top: 144px;
+}
+
+.layer-bottom {
+  top: 183px;
+}
+
+.icing {
+  top: 104px;
+  left: -37px;
+  background-color: #f0e4d0;
+  width: 350px;
+  height: 90px;
+  border-radius: 50%;
+}
+.icing:before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  right: 5px;
+  bottom: 6px;
+  left: 5px;
+  
+ 
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.drip {
+  display: block;
+  width: 50px;
+  height: 60px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  background-color: #f0e4d0;
+}
+
+.drip1 {
+  top: 181px;
+  left: 5px;
+  transform: skewY(15deg);
+  height: 48px;
+  width: 40px;
+}
+
+.drip2 {
+  top: 172px;
+  left: 181px;
+  transform: skewY(-15deg);
+}
+
+.drip3 {
+  top: 190px;
+  left: 90px;
+  width: 80px;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+}
+
+
+.heart {
+  /* width: 200px; */
+  background: radial-gradient(circle at 60% 65%, red 64%, transparent 65%) top left, radial-gradient(circle at 40% 65%, red 64%, transparent 65%) top right, linear-gradient(to bottom left, red 43%,transparent 43%) bottom left , linear-gradient(to bottom right,red 43%,transparent 43%) bottom right;
+  background-size: 50% 50%;
+  background-repeat: no-repeat;
+  display: inline-block;
+  top: -108px;
+  left: -19px;
+  width: 307px;
+  height: 296px;
+}
+.heart::before {
+  content:"";
+  display:block;
+  padding-top:100%;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
